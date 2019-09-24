@@ -1,16 +1,12 @@
-# fruitsalad
+# Fruit Salad
 
-A new Flutter project.
+Code for the UI screens created with flutter.
 
-## Getting Started
+Design credit - https://dribbble.com/shots/7185158-Fruit-Cookbook-App/attachments/184259?mode=media
 
-This project is a starting point for a Flutter application.
+How do I code this - https://youtu.be/6vsw8Z7uYlM
 
-A few resources to get you started if this is your first Flutter project:
+## Screenshots
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot_20190924-231859](https://user-images.githubusercontent.com/8137504/65550899-3adc6700-df3e-11e9-8dbb-2f67186e0dc7.png)
+![Screenshot_20190924-231910](https://user-images.githubusercontent.com/8137504/65550900-3adc6700-df3e-11e9-81b6-ec876351592d.png)
