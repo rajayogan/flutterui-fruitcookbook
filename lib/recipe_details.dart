@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 class RecipeDetails extends StatelessWidget {
-  final heroTag, dishName, calCount;
+  final heroTagImg, heroTagLabel, dishName, calCount;
 
-  RecipeDetails({this.heroTag, this.dishName, this.calCount});
+  RecipeDetails(
+      {this.heroTagImg, this.heroTagLabel, this.dishName, this.calCount});
 
   @override
   Widget build(BuildContext context) {
@@ -21,13 +22,13 @@ class RecipeDetails extends StatelessWidget {
           left: screenWidth / 2 + 25.0,
           bottom: screenHeight - 175.0,
           child: Hero(
-            tag: heroTag,
+            tag: heroTagImg,
             child: Container(
               height: 250.0,
               width: 250.0,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage(heroTag), fit: BoxFit.cover)),
+                      image: AssetImage(heroTagImg), fit: BoxFit.cover)),
             ),
           ),
         ),
@@ -119,60 +120,56 @@ class RecipeDetails extends StatelessWidget {
                 ),
                 Padding(
                   padding: EdgeInsets.only(
-                    left: 20.0,
-                    right: 20.0,
-                    bottom: 10.0,
-                    top: 5.0
-                  ),
+                      left: 20.0, right: 20.0, bottom: 10.0, top: 5.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       _buildIngredientRow('Strawberries',
-                            'assets/strawberries.png', '400g', screenWidth),
-                        SizedBox(height: 5.0),
-                        Container(
-                          height: 0.5,
-                          color: Colors.grey.withOpacity(0.2),
-                        ),
-                        SizedBox(height: 5.0),
+                          'assets/strawberries.png', '400g', screenWidth),
+                      SizedBox(height: 5.0),
+                      Container(
+                        height: 0.5,
+                        color: Colors.grey.withOpacity(0.2),
+                      ),
+                      SizedBox(height: 5.0),
                       _buildIngredientRow('Blueberries',
-                            'assets/blueberries.png', '200g', screenWidth),
-                        SizedBox(height: 5.0),
-                        Container(
-                          height: 0.5,
-                          color: Colors.grey.withOpacity(0.2),
-                        ),
-                        SizedBox(height: 5.0),
-                        _buildIngredientRow(
-                            'Kiwi', 'assets/kiwi.png', '2', screenWidth),
-                        SizedBox(height: 5.0),
-                        Container(
-                          height: 0.5,
-                          color: Colors.grey.withOpacity(0.2),
-                        ),
-                        SizedBox(height: 5.0),
-                        _buildIngredientRow(
-                            'Mango', 'assets/mango.png', '1', screenWidth),
-                        SizedBox(height: 5.0),
-                        Container(
-                          height: 0.5,
-                          color: Colors.grey.withOpacity(0.2),
-                        ),
-                        SizedBox(height: 15.0),
-                        Text(
-                          'Directions',
+                          'assets/blueberries.png', '200g', screenWidth),
+                      SizedBox(height: 5.0),
+                      Container(
+                        height: 0.5,
+                        color: Colors.grey.withOpacity(0.2),
+                      ),
+                      SizedBox(height: 5.0),
+                      _buildIngredientRow(
+                          'Kiwi', 'assets/kiwi.png', '2', screenWidth),
+                      SizedBox(height: 5.0),
+                      Container(
+                        height: 0.5,
+                        color: Colors.grey.withOpacity(0.2),
+                      ),
+                      SizedBox(height: 5.0),
+                      _buildIngredientRow(
+                          'Mango', 'assets/mango.png', '1', screenWidth),
+                      SizedBox(height: 5.0),
+                      Container(
+                        height: 0.5,
+                        color: Colors.grey.withOpacity(0.2),
+                      ),
+                      SizedBox(height: 15.0),
+                      Text('Directions',
                           style: TextStyle(
-                        fontFamily: 'Montserrat',
-                        fontWeight: FontWeight.w900,
-                        fontSize: 16.0,
-                          )
-                        ),
-
-                        
-                        SizedBox(height: 15.0),
-                    _buildBulletList('Slice all the fruits and place them into a large salad bowl', screenWidth),
-                    SizedBox(height: 15.0),
-                    _buildBulletList('Combine any additional juices like lime juice or any fresh orange juice', screenWidth)
+                            fontFamily: 'Montserrat',
+                            fontWeight: FontWeight.w900,
+                            fontSize: 16.0,
+                          )),
+                      SizedBox(height: 15.0),
+                      _buildBulletList(
+                          'Slice all the fruits and place them into a large salad bowl',
+                          screenWidth),
+                      SizedBox(height: 15.0),
+                      _buildBulletList(
+                          'Combine any additional juices like lime juice or any fresh orange juice',
+                          screenWidth)
                     ],
                   ),
                 )
@@ -194,22 +191,21 @@ class RecipeDetails extends StatelessWidget {
             height: 8.0,
             width: 8.0,
             decoration: BoxDecoration(
-              color: Color(0xFF25BEBD),
-              borderRadius: BorderRadius.circular(4.0)
-            ),
+                color: Color(0xFF25BEBD),
+                borderRadius: BorderRadius.circular(4.0)),
           ),
           SizedBox(width: 10.0),
           Container(
             width: screenWidth - 60.0,
-            child: Text(content,
-            style: TextStyle(
-                        fontFamily: 'Montserrat',
-                        fontWeight: FontWeight.w400,
-                        fontSize: 12.0,
-                      ) // color: Color(0xFFBBBBBB)),
-                      ),
+            child: Text(
+              content,
+              style: TextStyle(
+                fontFamily: 'Montserrat',
+                fontWeight: FontWeight.w400,
+                fontSize: 12.0,
+              ),
+            ),
           )
-          
         ],
       ),
     );
@@ -223,30 +219,30 @@ class RecipeDetails extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Container(
-            width: 175.0,
-            child: Row(
-              children: <Widget>[
-                Container(
-                  height: 50.0,
-                  width: 50.0,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(imgPath),
-                      fit: BoxFit.contain
-                    )
+              width: 175.0,
+              child: Row(
+                children: <Widget>[
+                  Container(
+                    height: 50.0,
+                    width: 50.0,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage(imgPath), fit: BoxFit.contain)),
                   ),
-                ),
-                SizedBox(width: 25.0),
-                Text(title,
-                    style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      fontWeight: FontWeight.w400,
-                      fontSize: 14.0,
-                    ) // color: Color(0xFFBBBBBB)),
-                    )
-              ],
-            )
-          ),
+                  SizedBox(width: 25.0),
+                  Hero(
+                    tag: title,
+                    child: Text(
+                      title,
+                      style: TextStyle(
+                        fontFamily: 'Montserrat',
+                        fontWeight: FontWeight.w400,
+                        fontSize: 14.0,
+                      ),
+                    ),
+                  )
+                ],
+              )),
           Text(
             quantity,
             style: TextStyle(
